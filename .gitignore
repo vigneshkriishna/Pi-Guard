@@ -1,0 +1,120 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+.next/
+.out/
+.cache/
+.parcel-cache/
+.vite/
+vite-cache/
+
+# Logs
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing/coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache/tmp
+.eslintcache
+.stylelintcache
+.cache-loader/
+.tmp/
+tmp/
+temp/
+
+# Misc frameworks
+.expo/
+.vercel/
+.netlify/
+
+# Storybook
+storybook-static/
+
+# Docker
+.docker/
+**/.docker/
+
+# Lock files are kept for reproducible installs
+# !package-lock.json
+# !pnpm-lock.yaml
+# !yarn.lock
+
+# Images/artifacts
+*.orig
+
+# OS trash
+.$RECYCLE.BIN/# Node.js dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+client/.env
+server/.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts
+dist/
+build/
+client/dist/
+server/dist/
+
+# Cache
+.cache/
+client/.cache/
+server/.cache/
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dependency locks (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

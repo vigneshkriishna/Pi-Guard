@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --background-muted: 210 40% 96%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    
+    /* Primary: Teal color for Pi-Net */
+    --primary: 171 75% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 171 75% 92%;
+    
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    /* Accent */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --background-muted: 223 47% 16%;
+    
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    
+    /* Primary in dark mode */
+    --primary: 171 70% 40%;
+    --primary-foreground: 210 40% 98%;
+    --primary-muted: 171 70% 20%;
+    
+    /* Card */
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+    
+    /* Accent */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    
+    /* Destructive */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #00c4b4;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 196, 180, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #00a89a;
+  box-shadow: 0 4px 12px rgba(0, 196, 180, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f5f7fa;
+  color: #6b7280;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #00c4b4;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #1f2a44;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #00c4b4;
+  box-shadow: 0 0 8px rgba(0, 196, 180, 0.2);
+}
+
+.output-box {
+  background: #f5f7fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.highlight-box {
+  background: #f5f7fa;
+  padding: 1.5rem;
+  border-left: 4px solid #00c4b4;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
