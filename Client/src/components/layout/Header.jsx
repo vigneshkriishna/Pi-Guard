@@ -21,12 +21,12 @@ function Header({ isMobileSidebarOpen, setIsMobileSidebarOpen, userInfo, onSignO
             <Menu size={24} />
           </button>
           <h1 className="text-xl font-bold text-teal-500 flex items-center">
-            <ShieldCheck className="mr-2 w-6 h-6" /> PI-Net
+            <ShieldCheck className="mr-2 w-6 h-6" /> Pi-Guard
           </h1>
         </div>
         
         {/* Logo for desktop - hidden on mobile */}        <h1 className="hidden lg:flex text-2xl font-bold text-teal-500 items-center">
-          <ShieldCheck className="mr-2 w-7 h-7" /> PI-Net CyberGuard
+          <ShieldCheck className="mr-2 w-7 h-7" /> Pi-Guard
         </h1>
 
         {/* Right side actions */}

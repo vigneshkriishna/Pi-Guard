@@ -22,7 +22,7 @@ function LoadingScreen() {
         <ShieldCheck size={48} className="text-primary animate-pulse" />
         <LoadingSpinner size="large" />
         <p className="text-xl font-medium text-foreground/80">
-          Loading PI-Net CyberGuard...
+          Loading Pi-Guard...
         </p>
       </motion.div>
     </motion.div>

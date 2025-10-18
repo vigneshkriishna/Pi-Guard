@@ -49,7 +49,7 @@ function Login({ setIsLoggedIn, setUser }) {
           >
             <ShieldCheck size={64} />
           </motion.div>
-          <h1 className="text-4xl font-extrabold tracking-tight">PI-Net CyberGuard</h1>
+          <h1 className="text-4xl font-extrabold tracking-tight">Pi-Guard</h1>
           <p className="mt-3 text-sm text-teal-100 text-center max-w-xs">
             Protect your digital world with cutting-edge tools and a thriving community.
           </p>

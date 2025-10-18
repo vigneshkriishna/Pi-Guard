@@ -1,10 +1,10 @@
-# Pi-Net - Cybersecurity Platform
+# Pi-Guard - Cybersecurity Platform
 
 A comprehensive cybersecurity platform for URL/file scanning, threat monitoring, and community engagement.
 
 ## 🚀 Features
 
-- **CyberGuard**: Scan URLs, files, domains, IPs, and hashes for threats
+- **Threat Scanner**: Scan URLs, files, domains, IPs, and hashes for threats
 - **Parental Monitor**: Monitor and protect children online
 - **Threat Dashboard**: Visualize security threats and statistics
 - **Community Posts**: Share and discuss cybersecurity topics
@@ -39,7 +39,7 @@ A comprehensive cybersecurity platform for URL/file scanning, threat monitoring,
 
 ### 1. Clone or navigate to the project
 ```bash
-cd "c:\Users\vigne\OneDrive\Desktop\Pi-Net"
+cd "c:\Users\vigne\OneDrive\Desktop\Pi-Guard"
 ```
 
 ### 2. Install Server Dependencies
@@ -122,13 +122,13 @@ npm run dev
 
 ### Option 2: Using PowerShell Commands
 
-From the root Pi-Net folder:
+From the root Pi-Guard folder:
 ```powershell
 # Start Server
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Net\Server'; npm start"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Guard\Server'; npm start"
 
 # Start Client
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Net\Client'; npm run dev"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Guard\Client'; npm run dev"
 ```
 
 ## 🌐 Access the Application
@@ -143,7 +143,7 @@ Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vign
 2. Choose to sign in with Google or continue as guest
 3. Select if you're a parent (access to all features) or not
 4. Start using the features:
-   - **CyberGuard**: Enter URLs, domains, IPs to scan
+   - **Threat Scanner**: Enter URLs, domains, IPs to scan
    - Upload files for virus scanning
    - View threat analysis powered by AI
 
