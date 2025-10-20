@@ -72,13 +72,13 @@ function Sidebar({ navigationItems, activeView, setActiveView, closeMobileSideba
       </div>
       
       <div className="px-6">        <div className="p-4 rounded-lg border border-border bg-card">
-          <h3 className="font-medium text-sm mb-2">PI-Net Pro</h3>
-          <p className="text-xs text-foreground/70 mb-3">
-            Upgrade for advanced protection and unlimited scans.
+          <h3 className="font-medium text-sm mb-2 text-teal-600 dark:text-teal-400">Pi-Guard</h3>
+          <p className="text-xs text-foreground/70 mb-2">
+            Advanced Cybersecurity Platform
           </p>
-          <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-1.5 px-3 rounded-md text-xs transition-colors">
-            Upgrade Now
-          </button>
+          <p className="text-xs text-foreground/60">
+            Developed by <span className="font-semibold text-teal-600 dark:text-teal-400">Vignesh</span>
+          </p>
         </div>
       </div>
     </aside>

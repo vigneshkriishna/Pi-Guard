@@ -85,6 +85,12 @@ function Layout({
               {children}
             </main>
           </div>
+
+          {/* Footer */}
+          <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-4 text-center text-sm text-gray-600 dark:text-gray-400">
+            <p>© 2025 Pi-Guard - Advanced Cybersecurity Platform</p>
+            <p className="mt-1">Developed by <span className="font-semibold text-teal-600 dark:text-teal-400">Vignesh</span></p>
+          </footer>
         </>
       )}
     </div>

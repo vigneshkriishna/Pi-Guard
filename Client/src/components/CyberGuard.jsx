@@ -32,11 +32,11 @@ function CyberGuard() {
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
             <ShieldCheck className="text-teal-500" />
-            CyberGuard Scanner
+            Threat Scanner
           </h2>
         </div>
         <p className="text-gray-600 dark:text-gray-400">
-          Scan websites, files, and more to detect threats and ensure your online safety
+          Scan URLs, domains, IPs, files, and hashes to detect threats and ensure your online safety
         </p>
       </div>
       

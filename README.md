@@ -179,6 +179,12 @@ Change the PORT in `Server/.env` to another port (e.g., 5001)
 
 This project is for educational purposes.
 
+## 👨‍💻 Author
+
+**Vignesh**
+- GitHub: [@vigneshkriishna](https://github.com/vigneshkriishna)
+- Project: [Pi-Guard](https://github.com/vigneshkriishna/Pi-Guard)
+
 ## 🤝 Contributing
 
 Feel free to fork, improve, and submit pull requests!

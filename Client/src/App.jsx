@@ -110,7 +110,7 @@ function App() {
 
   // Navigation items based on user role
   const navigationItems = [
-    { name: 'CyberGuard', id: 'cyberguard' },
+    { name: 'Threat Scanner', id: 'cyberguard' },
     ...(isParent ? [] : [
       { name: 'Parental Monitor', id: 'parental' },
       { name: 'Threat Dashboard', id: 'dashboard' },

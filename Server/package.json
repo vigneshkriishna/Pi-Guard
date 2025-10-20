@@ -1,6 +1,8 @@
 {
   "name": "pi-guard-server",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Vignesh",
+  "description": "Pi-Guard - Cybersecurity Platform Backend",
   "type": "module",
   "scripts": {
     "start": "node index.js"

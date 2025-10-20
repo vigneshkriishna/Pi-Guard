@@ -22,11 +22,13 @@ function Login({ setIsLoggedIn, setUser }) {
 
   const continueAsGuest = () => {
     setIsLoggedIn(false);
+    setUser(null);
     console.log('Continuing as guest');
   };
 
   const directLogin = () => {
     setIsLoggedIn(false);
+    setUser(null);
     console.log('Direct login without signing in');
   };
 
@@ -51,8 +53,11 @@ function Login({ setIsLoggedIn, setUser }) {
           </motion.div>
           <h1 className="text-4xl font-extrabold tracking-tight">Pi-Guard</h1>
           <p className="mt-3 text-sm text-teal-100 text-center max-w-xs">
-            Protect your digital world with cutting-edge tools and a thriving community.
+            Advanced Cybersecurity Platform - Protect your digital world with cutting-edge threat detection.
           </p>
+          <div className="mt-4 text-xs text-teal-200 opacity-75">
+            Developed by Vignesh
+          </div>
         </div>
 
         {/* Right Section: Login Options */}
