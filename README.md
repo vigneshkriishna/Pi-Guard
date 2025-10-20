@@ -1,184 +1,252 @@
-# Pi-Guard - Cybersecurity Platform
+### GitHub Copilot: # 🛡️ Pi-Guard Project Summary
 
-A comprehensive cybersecurity platform for URL/file scanning, threat monitoring, and community engagement.
+## 📌 What is Pi-Guard?
 
-## 🚀 Features
+**Pi-Guard** is a comprehensive cybersecurity platform that helps users scan URLs, files, domains, IPs, and hashes for potential threats using industry-standard APIs and AI-powered analysis.
 
-- **Threat Scanner**: Scan URLs, files, domains, IPs, and hashes for threats
-- **Parental Monitor**: Monitor and protect children online
-- **Threat Dashboard**: Visualize security threats and statistics
-- **Community Posts**: Share and discuss cybersecurity topics
-- **Cybersecurity News**: Stay updated with latest security news
+---
 
-## 🛠️ Tech Stack
+## 🎯 Key Features
 
-### Frontend
-- React 18 + Vite
-- Tailwind CSS
-- Framer Motion (animations)
-- Chart.js (data visualization)
-- React Router Dom
-- Supabase (auth & database)
+### 1. **Threat Scanner (CyberGuard)**
+- Scan URLs, domains, IP addresses, and file hashes
+- Real-time threat detection using VirusTotal API
+- AI-powered analysis using Google Gemini
+- Safety score calculation
+- Detailed threat reports
 
-### Backend
-- Node.js + Express.js
-- Socket.IO (real-time communication)
-- VirusTotal API (threat scanning)
-- Google Gemini AI (analysis)
-- Supabase (database)
+### 2. **File Scanner**
+- Upload files for virus scanning
+- Supports up to 50MB files
+- VirusTotal integration
+- AI-based threat assessment
+- Store scan history in database
 
-## 📋 Prerequisites
+### 3. **Threat Dashboard**
+- Visualize security statistics
+- View scan history
+- Charts and graphs powered by Chart.js
+- Real-time data updates
 
-1. **Node.js** (v16 or higher)
-2. **API Keys**:
-   - Supabase (URL + Anon Key) - [Get it here](https://supabase.com)
-   - VirusTotal API - [Get it here](https://www.virustotal.com/gui/my-apikey)
-   - Google Gemini API - [Get it here](https://makersuite.google.com/app/apikey)
+### 4. **Parental Monitor**
+- Monitor and protect children online
+- Track online activity
+- Safety controls
 
-## 🔧 Installation & Setup
+### 5. **Community Posts**
+- Share cybersecurity tips
+- Discuss security topics
+- Community engagement
 
-### 1. Clone or navigate to the project
-```bash
-cd "c:\Users\vigne\OneDrive\Desktop\Pi-Guard"
+### 6. **Cybersecurity News**
+- Latest security news
+- Stay updated with threats
+- Industry updates
+
+---
+
+## 🏗️ Technology Stack
+
+### **Frontend (Client)**
+- **React 18** - UI framework
+- **Vite** - Build tool & dev server
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Chart.js** - Data visualization
+- **Lucide React** - Icons
+- **React Router** - Navigation
+
+### **Backend (Server)**
+- **Node.js** - Runtime
+- **Express.js** - Web framework
+- **Socket.IO** - Real-time communication
+- **Multer** - File uploads
+- **Axios** - HTTP requests
+
+### **APIs & Services**
+- **Supabase** - Database & Authentication
+- **VirusTotal API** - Threat scanning
+- **Google Gemini AI** - AI-powered analysis
+- **Google OAuth** - User authentication
+
+---
+
+## 📁 Project Structure
+
+```
+Pi-Guard/
+├── Client/                    # Frontend application
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   │   ├── CyberGuard.jsx          # Main scanner
+│   │   │   ├── ThreatDashboard.jsx     # Analytics
+│   │   │   ├── ParentalMonitor.jsx     # Monitoring
+│   │   │   ├── CommunityPosts.jsx      # Community
+│   │   │   ├── Login.jsx               # Authentication
+│   │   │   └── layout/                 # Layout components
+│   │   ├── contexts/         # React Context (Theme)
+│   │   ├── hooks/            # Custom hooks
+│   │   └── supabase.js       # Supabase client
+│   ├── .env                  # Client config (PRIVATE)
+│   └── package.json          # Dependencies
+│
+├── Server/                    # Backend API
+│   ├── index.js              # Main server file
+│   ├── .env                  # Server config (PRIVATE)
+│   └── package.json          # Dependencies
+│
+├── Documentation Files:
+│   ├── README.md             # Main documentation
+│   ├── SETUP_GUIDE.md        # Detailed setup instructions
+│   ├── QUICK_START.md        # 5-minute quick start
+│   ├── SETUP_CHECKLIST.md    # Setup progress tracker
+│   ├── TROUBLESHOOTING.md    # Common issues & fixes
+│   ├── GOOGLE_OAUTH_SETUP.md # Google OAuth guide
+│   ├── database_setup.sql    # Database schema
+│   └── start.ps1             # Launch script
+│
+└── .gitignore                # Git ignore rules
 ```
 
-### 2. Install Server Dependencies
-```bash
-cd Server
-npm install
-```
+---
 
-### 3. Install Client Dependencies
-```bash
-cd ..\Client
-npm install
-```
+## 🔑 Configuration
 
-### 4. Configure Environment Variables
-
-#### Server (.env file in Server folder)
+### **Server Environment Variables** (.env)
 ```env
 PORT=5000
-SUPABASE_URL=your_supabase_url_here
-SUPABASE_KEY=your_supabase_anon_key_here
-VIRUSTOTAL_API_KEY=your_virustotal_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
+SUPABASE_URL=https://yabdjisglehtswuvoyky.supabase.co
+SUPABASE_KEY=[configured]
+VIRUSTOTAL_API_KEY=[configured]
+GEMINI_API_KEY=[configured]
 ```
 
-#### Client (.env file in Client folder)
+### **Client Environment Variables** (.env)
 ```env
-VITE_SUPABASE_URL=your_supabase_url_here
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+VITE_API_URL=http://localhost:5000
+VITE_SUPABASE_URL=[configured]
+VITE_SUPABASE_ANON_KEY=[configured]
+VITE_GEMINI_API_KEY=[configured]
 ```
 
-### 5. Setup Supabase Database
+---
 
-Create these tables in your Supabase project:
+## 🗄️ Database Schema
 
-**scan_insights table:**
-```sql
-CREATE TABLE scan_insights (
-  id BIGSERIAL PRIMARY KEY,
-  input TEXT NOT NULL,
-  type TEXT NOT NULL,
-  is_safe BOOLEAN,
-  safety_score INTEGER,
-  vt_stats JSONB,
-  vt_full_data JSONB,
-  gemini_insights TEXT,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-```
+### **Tables in Supabase:**
 
-**file_insights table:**
-```sql
-CREATE TABLE file_insights (
-  id BIGSERIAL PRIMARY KEY,
-  filename TEXT NOT NULL,
-  is_safe BOOLEAN,
-  safety_score INTEGER,
-  vt_stats JSONB,
-  vt_full_data JSONB,
-  gemini_insights TEXT,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-```
+1. **scan_insights** - Stores URL/Domain/IP/Hash scan results
+   - id, input, type, is_safe, safety_score
+   - vt_stats (VirusTotal data)
+   - gemini_insights (AI analysis)
+   - created_at
 
-## 🎮 Running the Application
+2. **file_insights** - Stores file scan results
+   - id, filename, is_safe, safety_score
+   - vt_stats, vt_full_data
+   - gemini_insights
+   - created_at
 
-### Option 1: Run Both Servers (Recommended)
+---
 
-**Terminal 1 - Server:**
-```bash
-cd Server
-npm start
-```
+## 🚀 How It Works
 
-**Terminal 2 - Client:**
-```bash
-cd Client
-npm run dev
-```
+### **Scanning Flow:**
+1. User enters URL/domain/IP/hash or uploads file
+2. Frontend sends request to backend API
+3. Backend queries VirusTotal API for threat data
+4. Backend sends data to Google Gemini for AI analysis
+5. Results are saved to Supabase database
+6. Frontend displays comprehensive threat report
+7. User sees safety score, threats, and recommendations
 
-### Option 2: Using PowerShell Commands
+### **Authentication Flow:**
+1. User can sign in with Google OAuth
+2. Or continue as guest (limited features)
+3. Supabase handles authentication
+4. User session is maintained across visits
 
-From the root Pi-Guard folder:
-```powershell
-# Start Server
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Guard\Server'; npm start"
+---
 
-# Start Client
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'c:\Users\vigne\OneDrive\Desktop\Pi-Guard\Client'; npm run dev"
-```
+## 📊 Current Status
 
-## 🌐 Access the Application
+### ✅ **Completed:**
+- Project structure set up
+- All dependencies installed
+- Environment variables configured
+- Database tables created
+- Backend server running (port 5000)
+- Frontend client running (port 5173)
+- API integrations connected
+- Documentation created
 
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:5000
-- **Network Access**: http://YOUR_LOCAL_IP:5173 (from other devices)
+### ⏳ **Pending:**
+- Google OAuth configuration (optional)
+- Production deployment (optional)
+- Custom domain setup (optional)
 
-## 📱 Usage
+---
 
-1. Open http://localhost:5173 in your browser
-2. Choose to sign in with Google or continue as guest
-3. Select if you're a parent (access to all features) or not
-4. Start using the features:
-   - **Threat Scanner**: Enter URLs, domains, IPs to scan
-   - Upload files for virus scanning
-   - View threat analysis powered by AI
+## 🌐 Access URLs
 
-## 🔒 Security Notes
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://localhost:5000
+- **Network Access:** http://10.184.215.139:5173
+- **Supabase Dashboard:** https://supabase.com/dashboard/project/yabdjisglehtswuvoyky
 
-- Never commit your `.env` files to version control
-- Keep your API keys secure
-- VirusTotal has rate limits (4 requests/minute for free tier)
-- Ensure CORS is properly configured for production
+---
 
-## 🐛 Troubleshooting
+## 💰 Cost
 
-### "Cannot find module 'cors'"
-```bash
-cd Server
-npm install cors
-```
+**Total Cost: $0/month**
 
-### Port Already in Use
-Change the PORT in `Server/.env` to another port (e.g., 5001)
+All services use free tiers:
+- Supabase (500MB DB, 50K users/month)
+- VirusTotal (15.5K requests/month)
+- Google Gemini (1M requests/month)
+- Google OAuth (Unlimited)
 
-### Supabase Connection Issues
-- Verify your SUPABASE_URL and SUPABASE_KEY are correct
-- Check if your Supabase project is active
-- Ensure database tables are created
+---
 
-### VirusTotal API Errors
-- Verify your API key is valid
-- Check rate limits (free tier: 4 requests/minute)
-- Ensure you have an active VirusTotal account
+## 🔒 Security Features
 
-## 📄 License
+- Environment variables for sensitive data
+- .gitignore prevents credential exposure
+- CORS protection
+- Supabase authentication
+- Input validation
+- Rate limiting (VirusTotal)
 
-This project is for educational purposes.
+---
 
-## 🤝 Contributing
+## 🎨 UI/UX Features
 
-Feel free to fork, improve, and submit pull requests!
+- Dark/Light theme toggle
+- Responsive design (mobile-friendly)
+- Smooth animations (Framer Motion)
+- Loading states
+- Error handling
+- Real-time updates
+
+---
+
+## 📝 Recent Changes
+
+- Project renamed from "Pi-Net" to "Pi-Guard"
+- All branding updated across files
+- Comprehensive documentation added
+- Setup guides created
+- Environment templates provided
+- Database schema finalized
+
+---
+
+## 🎯 Use Cases
+
+1. **Personal Security** - Check URLs before clicking
+2. **File Safety** - Scan downloads for malware
+3. **Educational** - Learn about cybersecurity
+4. **Portfolio Project** - Showcase your skills
+5. **Small Business** - Protect team from threats
+
+---🛡️
